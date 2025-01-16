@@ -1,4 +1,3 @@
-
 const COLORS = ['red', 'pink', 'orange', 'yellow', 'purple', 'green', 'blue', 'brown',
         'gray', 'lime', 'teal', 'navy', 'silver', 'aqua', 'violet', 'magenta',
         'gold', 'coral', 'salmon', 'crimson', 'khaki', 'olive', 'indigo', 'maroon'];
@@ -27,7 +26,7 @@ const ID_PARAMETERS = 'parameters';
 const ID_TIMER = 'timer';
 const MESSAGE_WELL_DONE = 'Well done!'
 const MS_PER_S = 1000;
-const PARAMETER_MODE = 'mode';
+const PARAMETER_THEME = 'theme';
 const PARAMETER_DELAY = 'delay';
 const PARAMETER_PAIRS = 'pairs';
 const S_PER_MIN = 60;
@@ -36,7 +35,7 @@ function main() {
     const parameters = new URLSearchParams(window.location.search);
     if (parameters.size != 0) {
         document.getElementById(ID_PARAMETERS).style.display = 'none';
-        const mode = parseInt(parameters.get(PARAMETER_MODE));
+        const theme = parseInt(parameters.get(PARAMETER_THEME));
         const pairs = parseInt(parameters.get(PARAMETER_PAIRS));
         const delay = parseInt(parameters.get(PARAMETER_DELAY));
         const rows = Math.floor(Math.sqrt(2 * pairs));
@@ -89,7 +88,7 @@ function main() {
             const row = document.createElement(ELEMENT_TR);
             for (let j = 0; (j < columns) && (j < 2 * pairs - i * columns); j++) {
                 const cell = document.createElement(ELEMENT_TD);
-                cell.content = CONTENTS[mode][hash[i * columns + j] % CONTENTS[mode].length];
+                cell.content = CONTENTS[theme][hash[i * columns + j] % CONTENTS[theme].length];
                 cell.color = COLORS[hash[i * columns + j] % COLORS.length];
                 cell.found = false;
                 cell.setContent = function (content, color) {
