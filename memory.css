@@ -1,0 +1,13 @@
+body {
+    font-family: 'Varela Round';
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 400%;
+}
