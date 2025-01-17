@@ -33,7 +33,7 @@ const S_PER_MIN = 60;
 
 function main() {
     const parameters = new URLSearchParams(window.location.search);
-    if (parameters.size != 0) {
+    if (parameters.size > 0) {
         document.getElementById(ID_PARAMETERS).style.display = 'none';
         const theme = parseInt(parameters.get(PARAMETER_THEME));
         const pairs = parseInt(parameters.get(PARAMETER_PAIRS));
