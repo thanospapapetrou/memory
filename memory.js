@@ -12,7 +12,7 @@ const CONTENTS = [
          ['🍌', '🍎', '🍐', '🍓', '🍒', '🍉', '🍍', '🍑',
          '🍋', '🍅', '🍞', '🍖', '🍗', '🍝', '🍟', '🍕',
          '🌭', '🍔', '🍪', '🍩', '🍨', '🍫', '🍰', '🍭']];
-CONTENTS[-1] = '?';
+CONTENTS[-1] = '❓';
 const CURSOR_DISABLED = 'not-allowed';
 const CURSOR_ENABLED = 'pointer';
 const DELAY = 1000;
